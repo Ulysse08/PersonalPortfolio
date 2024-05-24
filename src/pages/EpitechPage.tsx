@@ -28,7 +28,7 @@ function EpitechPage({}: Props) {
       <EpitechProjects
         heading="Projects at EPITECH"
         image={{
-          src: 'https://relume-assets.s3.amazonaws.com/placeholder-image.svg',
+          src: '/images/photo_13617.jpg',
           alt: 'Placeholder image',
         }}
       >

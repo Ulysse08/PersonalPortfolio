@@ -29,7 +29,7 @@ function DigitalKornerPage({}: Props) {
     <div>
       <DigitalKorner {...DigitalKornerDefaults} />
       <Footer
-        image={{ src: 'logo.png', alt: 'Logo' }}
+        image={{ src: '/images/Licence-en-marketing-digital.png', alt: 'Logo' }}
         footerText="© 2024 Alexandre Jacquemard. All rights reserved."
         columnLinks={footerColumnLinks}
         socialMediaLinks={socialMediaLinks}

@@ -29,7 +29,7 @@ function ValeoPage({}: Props) {
     <div>
       <ValeoComponentValeo {...ValeoComponentValeoDefaults} />
       <Footer
-        image={{ src: 'logo.png', alt: 'Logo' }}
+        image={{ src: '/images/AppScript.jpg', alt: 'Logo' }}
         footerText="© 2024 Alexandre Jacquemard. All rights reserved."
         columnLinks={footerColumnLinks}
         socialMediaLinks={socialMediaLinks}

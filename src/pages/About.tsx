@@ -63,7 +63,7 @@ const About: React.FC = () => {
                   {
                     url: '/about/digital-korner-internship',
                     image: { src: '/images/wpconnect.png', alt: 'Image 1' },
-                    readTime: '(May 2022 - November 2022)',
+                    readTime: '(May 2023 - November 2023)',
                     title: 'Digital Marketing Intern - DIGITAL KORNER, Nantes',
                     description: 'Click on this card to learn more about the missions and projects i completed for Digital Korner during my internship',
                   },

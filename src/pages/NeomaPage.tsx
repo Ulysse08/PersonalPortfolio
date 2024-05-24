@@ -28,7 +28,7 @@ function NeomaPage({}: Props) {
       <NeomaProjects
         heading="Projects at NEOMA"
         image={{
-          src: 'https://relume-assets.s3.amazonaws.com/placeholder-image.svg',
+          src: '/images/NEOMA-BS-Paris-2',
           alt: 'Placeholder image',
         }}
       >

@@ -4,7 +4,6 @@ import React, { Suspense } from 'react'
 import type { ImageProps, ButtonProps as BaseButtonProps } from '@relume_io/relume-ui'
 import { FaArrowRightLong } from 'react-icons/fa6'
 import { LuDownload } from 'react-icons/lu'
-import ImageHeader from '../../assets/HomeAssets/HeaderImageHome.svg'
 
 interface ButtonProps extends BaseButtonProps {
   href?: string;
@@ -33,7 +32,7 @@ const HomeHeaderDefaults: Props = {
     { title: 'More About Me', variant: 'secondary' },
   ],
   image: {
-    src: ImageHeader,
+    src: "/images/HomeHeaderImage.jpg",
     alt: 'Header image',
   },
 }
@@ -47,7 +46,7 @@ export const HomeHeader: React.FC<HomeHeaderProps> = props => {
   return (
     <section className="px-[5%] py-16 md:py-24 lg:py-28">
       <div className="container">
-        <div className="grid grid-cols-1 gap-x-20 gap-y-12 md:gap-y-16 lg:grid-cols-[3fr_2fr] lg:items-center">
+        <div className="grid grid-cols-1 gap-x-20 gap-y-12 md:gap-y-16 lg:grid-cols-[3fr_2.5fr] lg:items-center">
           <div>
             <h1 className="mb-5 text-5xl font-heading font-semibold md:mb-6 md:text-9xl lg:text-10xl text-text">
               Hi! I'm <span className="text-main">Alexandre Jacquemard</span>, I
@@ -87,7 +86,7 @@ export const HomeHeader: React.FC<HomeHeaderProps> = props => {
           <div>
             <img
               src={image.src}
-              className="w-full object-cover"
+              className="w-full object-cover rounded-xl"
               alt={image.alt}
               loading="lazy"
             />

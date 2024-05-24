@@ -87,7 +87,7 @@ const sections: Section[] = [
     },
     {
         id: 'section10',
-        title: 'Certifications and Awards',
+        title: 'Certifications',
         bulletPoints: [
             "<strong>IELTS Certification:</strong> Score of 6/9.",
             "<strong>Web Development Certification:</strong> Web integration, web development, and mobile application development from EPITECH."
