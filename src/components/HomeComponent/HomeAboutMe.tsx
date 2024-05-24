@@ -17,7 +17,7 @@ const HomeAboutMeDefaults: Props = {
     "I'm currently pursuing a degree in Innovation, Marketing, Digital & Digital Management at NEOMA Business School. I also completed a web development program at EPITECH. With a strong orientation in project management, I specialize in digital marketing and programming. I bring innovation, adaptability, and new technologies to every project I undertake.",
   buttons: [{ title: 'Button' }, { title: 'Button', variant: 'secondary' }],
   image: {
-    src: 'https://relume-assets.s3.amazonaws.com/placeholder-image.svg',
+    src: '/images/HomeImage.jpg',
     alt: 'Placeholder image',
   },
 }
@@ -32,10 +32,10 @@ export const HomeAboutMe: React.FC<HomeAboutMeProps> = props => {
     <header className="px-[5%] py-16 md:py-24 lg:py-28">
       <div className="container">
         <div className="grid grid-cols-1 gap-x-20 gap-y-12 md:gap-y-16 lg:grid-cols-2 lg:items-center">
-          <div className="order-2 lg:order-1">
+          <div className="order-2 lg:order-1 ">
             <img
               src={image.src}
-              className="w-full object-cover"
+              className="w-full object-cover rounded-xl"
               alt={image.alt}
             />
           </div>

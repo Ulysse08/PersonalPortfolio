@@ -1,4 +1,3 @@
-// components/ExperiencesCards.tsx
 import React from 'react'
 
 type BlogPost = {
@@ -33,8 +32,8 @@ const ExperiencesCards: React.FC<Props> = ({
 }) => {
   return (
     <section id="section5">
-      <div className="">
-        <div className="mb-12 w-full md:mb-18 lg:mb-20">
+      <div className="container mx-auto px-4">
+        <div className="mb-6 w-full md:mb-10 lg:mb-10">
           <h2 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
             {heading}
           </h2>
@@ -45,22 +44,22 @@ const ExperiencesCards: React.FC<Props> = ({
             <div
               key={`${post.title}-${index}`}
               id={`section5-${index}`}
-              className="flex size-full flex-col items-center justify-start border rounded hover:scale-105"
+              className="flex size-full flex-col items-center justify-start border border-border-primary ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-border-primary focus-visible:ring-offset-2"
             >
               <a
                 href={post.url}
-                className="mb-6 w-full ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-border-primary focus-visible:ring-offset-2"
+                className="relative w-full overflow-hidden pt-[66%]"
               >
                 <img
                   src={post.image.src}
                   alt={post.image.alt}
-                  className="aspect-video size-full object-cover"
+                  className="absolute inset-0 size-full object-cover"
                   loading="lazy"
                 />
               </a>
-              <div className='p-4'>
-                <div className="mb-4 flex w-full items-center justify-start">
-                  <p className="inline text-sm font-semibold">
+              <div className='flex w-full flex-1 flex-col justify-between px-5 py-6 md:p-6'>
+                <div className="mb-4 flex items-center">
+                  <p className="mr-4 bg-background-secondary px-2 py-1 text-sm font-semibold">
                     {post.readTime}
                   </p>
                 </div>

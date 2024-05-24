@@ -43,13 +43,13 @@ const TableOfContents: React.FC<TOCProps> = ({ sections }) => {
   };
 
   return (
-    <div id="toc-container" className="w-[35%] ml-20 hidden lg:block">
+    <div id="toc-container" className="ml-20 hidden lg:block w-1/4">
       <div id="toc" className="stickyTable py-4 rounded border-accent border">
         <h3 className="text-xl font-semibold mb-4 text-text px-4">Table of Contents</h3>
         <ul>
           {sections.map((section) => (
             <li key={section.id} className='py-1 px-4 hover:bg-secondary'>
-              <a href={`#${section.id}`} className="text-text hover:underline flex flex-row items-center" onClick={(e) => handleClick(e, section.id)}>
+              <a href={`#${section.id}`} className="text-text hover:underline flex flex-row items-center whitespace-nowrap" onClick={(e) => handleClick(e, section.id)}>
                 <BsArrowRightShort className='mr-2'/>
                 {section.title}
               </a>
