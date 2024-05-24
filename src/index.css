@@ -3,5 +3,101 @@
 @tailwind utilities;
 
 body {
-  @apply bg-zinc-900 text-zinc-200;
+  @apply bg-background text-black font-text;
+}
+
+
+@keyframes blink {
+  from, to { border-color: transparent; }
+  50% { border-color: var(--tw-text-black); }
+}
+
+.animate-blink {
+  animation: blink 0.75s step-end infinite;
+}
+
+
+
+/* src/components/ScrollTriggerSection.css */
+.scroll-trigger-pin {
+  position: relative;
+}
+
+.scroll-trigger-pin__windmill-col {
+  position: relative;
+}
+
+.scroll-trigger-pin__marker {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+}
+
+.scroll-trigger-pin__marker--start {
+  top: -20px;
+}
+
+.scroll-trigger-pin__marker--end {
+  bottom: -20px;
+}
+
+.scroll-trigger-pin__windmill-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.scroll-trigger-pin__windmill {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.scroll-trigger-pin__windmill-svg {
+  width: 100px;
+  height: 100px;
+}
+
+.scroll-trigger-pin__progress {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 4px;
+}
+
+.scroll-trigger-pin__text-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scroll-trigger-pin__content {
+  text-align: center;
+}
+
+.heading-l {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.body-r {
+  font-size: 1rem;
+}
+
+.code {
+  background-color: var(--code-background);
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+pre {
+  margin: 0;
+}
+
+code {
+  color: white;
 }
