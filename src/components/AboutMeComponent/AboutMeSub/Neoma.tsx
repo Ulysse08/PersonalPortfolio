@@ -31,7 +31,7 @@ export const NeomaProjects = (props: NeomaProjectsProps) => {
             <div className="prose">{children}</div>
           </div>
           <div>
-            <img src={image.src} className="w-full object-cover" alt={image.alt} />
+            <img src={image.src} className="w-full object-cover rounded-lg" alt={image.alt} />
           </div>
         </div>
       </div>

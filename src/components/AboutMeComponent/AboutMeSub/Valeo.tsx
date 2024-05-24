@@ -51,7 +51,7 @@ export const ValeoComponentValeo = (props: ValeoComponentProps) => {
             </div>
             <img
               src={image.src}
-              className="w-full object-cover "
+              className="w-full object-cover rounded-lg"
               alt={image.alt}
             />
           </div>
@@ -279,7 +279,7 @@ export const ValeoComponentValeoDefaults: ValeoComponentProps = {
     </>
   ),
   image: {
-    src: 'https://relume-assets.s3.amazonaws.com/placeholder-image-landscape.svg',
+    src: '/images/AppScript.jpg',
     alt: 'Valeo France Overview Image',
   },
 }

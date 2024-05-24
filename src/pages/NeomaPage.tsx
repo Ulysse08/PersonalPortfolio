@@ -28,7 +28,7 @@ function NeomaPage({}: Props) {
       <NeomaProjects
         heading="Projects at NEOMA"
         image={{
-          src: '/images/NEOMA-BS-Paris-2',
+          src: '/images/neomaproject.jpg',
           alt: 'Placeholder image',
         }}
       >

@@ -1,5 +1,5 @@
 // HomeHeader.tsx
-
+import { Link } from 'react-router-dom'
 import React, { Suspense } from 'react'
 import type { ImageProps, ButtonProps as BaseButtonProps } from '@relume_io/relume-ui'
 import { FaArrowRightLong } from 'react-icons/fa6'
@@ -68,8 +68,8 @@ export const HomeHeader: React.FC<HomeHeaderProps> = props => {
                       <LuDownload className="ml-3 text-lg text-text" />
                     </a>
                   ) : (
-                    <a
-                      href="/about"
+                    <Link
+                      to={"/about"}
                       className="rounded-md  relative inline-flex group items-center justify-center px-4 py-3 m-1 cursor-pointer active:border-main shadow-sm hover:shadow-lg transition-all ease-in-out  bg-gradient-to-tr from-main to-main border-accent text-white"
                     >
                       <span className="flex flex-row justify-center absolute w-0 h-0 transition-all duration-300 ease-out bg-white rounded-full group-hover:w-56 group-hover:h-[150%] opacity-10"></span>
@@ -77,7 +77,7 @@ export const HomeHeader: React.FC<HomeHeaderProps> = props => {
                         More About Me
                       </span>
                       <FaArrowRightLong className="ml-4 text-md text-background" />
-                    </a>
+                    </Link>
                   )}
                 </Suspense>
               ))}

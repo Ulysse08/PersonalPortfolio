@@ -28,7 +28,7 @@ function EpitechPage({}: Props) {
       <EpitechProjects
         heading="Projects at EPITECH"
         image={{
-          src: '/images/photo_13617.jpg',
+          src: '/images/epitechproject.jpg',
           alt: 'Placeholder image',
         }}
       >

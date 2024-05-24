@@ -53,7 +53,7 @@ export const DigitalKorner = (props: DigitalKornerProps) => {
             </div>
             <img
               src={image.src}
-              className="w-full object-cover "
+              className="w-full object-cover rounded-lg"
               alt={image.alt}
             />
           </div>
@@ -306,7 +306,7 @@ export const DigitalKornerDefaults: DigitalKornerProps = {
     </>
   ),
   image: {
-    src: 'https://relume-assets.s3.amazonaws.com/placeholder-image-landscape.svg',
+    src: '/images/marketing.jpg',
     alt: 'Digital Korner Overview Image',
   },
 }
