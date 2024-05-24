@@ -1,10 +1,10 @@
 "use client";
 
 import React, { useState } from "react";
-import { Input, Label, Checkbox, Textarea } from "@relume_io/relume-ui";
+import { Input, Label, Textarea } from "@relume_io/relume-ui";
 import { BiEnvelope, BiMap, BiPhone } from "react-icons/bi";
 import { FaArrowRightLong } from "react-icons/fa6";
-import { sendContactForm } from "./EmailService"; // Assume this is your email service module
+import { sendContactForm } from "./EmailService";
 
 type Props = {
   tagline: string;
@@ -72,9 +72,7 @@ export const ContactForm: React.FC<ContactFormProps> = (props) => {
 
         <form className="grid grid-cols-1 grid-rows-[auto_auto] gap-6" onSubmit={handleSubmit}>
           <div className="grid w-full items-center">
-            <Label htmlFor="name" className="mb-2">
-              Name
-            </Label>
+            <Label htmlFor="name" className="mb-2">Name</Label>
             <Input
               type="text"
               id="name"
@@ -84,9 +82,7 @@ export const ContactForm: React.FC<ContactFormProps> = (props) => {
           </div>
 
           <div className="grid w-full items-center">
-            <Label htmlFor="email" className="mb-2">
-              Email
-            </Label>
+            <Label htmlFor="email" className="mb-2">Email</Label>
             <Input
               type="email"
               id="email"
@@ -96,9 +92,7 @@ export const ContactForm: React.FC<ContactFormProps> = (props) => {
           </div>
 
           <div className="grid w-full items-center">
-            <Label htmlFor="message" className="mb-2">
-              Message
-            </Label>
+            <Label htmlFor="message" className="mb-2">Message</Label>
             <Textarea
               id="message"
               placeholder="Type your message..."
@@ -114,9 +108,7 @@ export const ContactForm: React.FC<ContactFormProps> = (props) => {
               className="rounded-md relative inline-flex group items-center justify-center px-4 py-3 m-1 cursor-pointer active:border-main shadow-sm hover:shadow-lg transition-all ease-in-out bg-gradient-to-tr from-main to-main border-accent text-white"
             >
               <span className="flex flex-row justify-center absolute w-0 h-0 transition-all duration-300 ease-out bg-white rounded-full group-hover:w-56 group-hover:h-[150%] opacity-10"></span>
-              <span className="relative text-background">
-                {button.title}
-              </span>
+              <span className="relative text-background">{button.title}</span>
               <FaArrowRightLong className="ml-4 text-md text-background" />
             </button>
           </div>

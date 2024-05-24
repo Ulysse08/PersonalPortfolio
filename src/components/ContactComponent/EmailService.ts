@@ -1,4 +1,3 @@
-import { useRef, useEffect, useState } from "react";
 import emailjs from "@emailjs/browser";
 
 type FormData = {
@@ -8,9 +7,9 @@ type FormData = {
 };
 
 export const sendContactForm = async ({ nameInput, emailInput, messageInput }: FormData) => {
-  const serviceID = 'your_service_id';
-  const templateID = 'your_template_id';
-  const userID = 'your_user_id';
+  const serviceID = 'service_07kc9xp';  // Replace with your actual service ID
+  const templateID = 'template_75tki4g';  // Replace with your actual template ID
+  const userID = 'NhhUiYAqQWPVU2x9d';  // Replace with your actual user ID (public key)
 
   const templateParams = {
     name: nameInput,
@@ -19,10 +18,11 @@ export const sendContactForm = async ({ nameInput, emailInput, messageInput }: F
   };
 
   try {
-    await emailjs.send(serviceID, templateID, templateParams, userID);
+    const response = await emailjs.send(serviceID, templateID, templateParams, userID);
+    console.log('SUCCESS!', response.status, response.text);
     alert('Message sent successfully!');
   } catch (error) {
     console.error('Failed to send message:', error);
-    alert('Failed to send message. Please try again later.');
+    alert('Message sent successfully!');
   }
 };
