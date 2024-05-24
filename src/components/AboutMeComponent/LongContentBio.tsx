@@ -2,8 +2,6 @@
 import React, { Suspense } from 'react';
 import 'tailwindcss/tailwind.css';
 
-
-
 const sections = [
   {
     id: 'section1',

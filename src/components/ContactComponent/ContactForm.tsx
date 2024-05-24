@@ -1,12 +1,10 @@
 "use client";
 
-import React, { useState, Suspense } from "react";
+import React, { useState } from "react";
 import { Input, Label, Checkbox, Textarea } from "@relume_io/relume-ui";
-import type { ButtonProps } from "@relume_io/relume-ui";
 import { BiEnvelope, BiMap, BiPhone } from "react-icons/bi";
+import { FaArrowRightLong } from "react-icons/fa6";
 import { sendContactForm } from "./EmailService"; // Assume this is your email service module
-
-const LazyButton = React.lazy(() => import("@relume_io/relume-ui").then(module => ({ default: module.Button })));
 
 type Props = {
   tagline: string;
@@ -15,19 +13,21 @@ type Props = {
   email: string;
   phone: string;
   address: string;
-  button: ButtonProps;
+  button: {
+    title: string;
+  };
 };
 
 export type ContactFormProps = React.ComponentPropsWithoutRef<"section"> & Props;
 
 export const ContactFormDefaults: ContactFormProps = {
   tagline: "Tagline",
-  heading: "Contact us",
+  heading: "Contact Me",
   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   email: "hello@relume.io",
   phone: "+1 (555) 000-0000",
   address: "123 Sample St, Sydney NSW 2000 AU",
-  button: { title: "Submit" },
+  button: { title: "Submit" }
 };
 
 export const ContactForm: React.FC<ContactFormProps> = (props) => {
@@ -39,11 +39,10 @@ export const ContactForm: React.FC<ContactFormProps> = (props) => {
   const [nameInput, setNameInput] = useState("");
   const [emailInput, setEmailInput] = useState("");
   const [messageInput, setMessageInput] = useState("");
-  const [acceptTerms, setAcceptTerms] = useState<boolean | "indeterminate">(false);
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    await sendContactForm({ nameInput, emailInput, messageInput, acceptTerms });
+    await sendContactForm({ nameInput, emailInput, messageInput });
   };
 
   return (
@@ -109,32 +108,17 @@ export const ContactForm: React.FC<ContactFormProps> = (props) => {
             />
           </div>
 
-          <div className="mb-3 flex items-center space-x-2 text-sm md:mb-4">
-            <Checkbox id="terms" checked={acceptTerms} onCheckedChange={setAcceptTerms} />
-            <Label htmlFor="terms" className="cursor-pointer">
-              I accept the{" "}
-              <a
-                className="text-link-primary underline focus-visible:outline-none"
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Terms
-              </a>
-            </Label>
-          </div>
-
           <div>
-            <Suspense fallback={<div>Loading...</div>}>
-              <LazyButton
-                variant={button.variant}
-                size={button.size}
-                iconRight={button.iconRight}
-                iconLeft={button.iconLeft}
-              >
+            <button
+              type="submit"
+              className="rounded-md relative inline-flex group items-center justify-center px-4 py-3 m-1 cursor-pointer active:border-main shadow-sm hover:shadow-lg transition-all ease-in-out bg-gradient-to-tr from-main to-main border-accent text-white"
+            >
+              <span className="flex flex-row justify-center absolute w-0 h-0 transition-all duration-300 ease-out bg-white rounded-full group-hover:w-56 group-hover:h-[150%] opacity-10"></span>
+              <span className="relative text-background">
                 {button.title}
-              </LazyButton>
-            </Suspense>
+              </span>
+              <FaArrowRightLong className="ml-4 text-md text-background" />
+            </button>
           </div>
         </form>
       </div>

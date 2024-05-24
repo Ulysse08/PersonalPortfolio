@@ -1,11 +1,11 @@
-import React from 'react';
-import { Footer } from '../components/GlobalComponent/Footer';
-import { HomeHeader } from '../components/HomeComponent/HeaderHome';
-import { HomeAboutMe } from '../components/HomeComponent/HomeAboutMe';
-import { FaXTwitter } from 'react-icons/fa6'
+import React from 'react'
 import {
-  BiLogoLinkedinSquare,
-} from 'react-icons/bi'
+  DigitalKorner,
+  DigitalKornerDefaults,
+} from '../components/AboutMeComponent/AboutMeSub/DigitalKorner'
+import { Footer } from '../components/GlobalComponent/Footer'
+import { FaXTwitter } from 'react-icons/fa6'
+import { BiLogoLinkedinSquare } from 'react-icons/bi'
 
 const footerColumnLinks = [
   {
@@ -22,11 +22,12 @@ const socialMediaLinks = [
   { url: 'https://linkedin.com', icon: <BiLogoLinkedinSquare /> },
 ]
 
-function Home() {
+type Props = {}
+
+function DigitalKornerPage({}: Props) {
   return (
-    <div className=''>
-      <HomeHeader />
-      <HomeAboutMe />
+    <div>
+      <DigitalKorner {...DigitalKornerDefaults} />
       <Footer
         image={{ src: 'logo.png', alt: 'Logo' }}
         footerText="© 2024 Alexandre Jacquemard. All rights reserved."
@@ -37,4 +38,4 @@ function Home() {
   )
 }
 
-export default Home
+export default DigitalKornerPage

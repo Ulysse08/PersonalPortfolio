@@ -1,33 +1,36 @@
 // components/ExperiencesCards.tsx
-import React from 'react';
+import React from 'react'
 
 type BlogPost = {
-  url: string;
-  image: { src: string; alt: string };
-  category: string;
-  readTime: string;
-  title: string;
-  description: string;
-};
+  url: string
+  image: { src: string; alt: string }
+  readTime: string
+  title: string
+  description: string
+}
 
 type Props = {
-  heading: string;
-  description: string;
-  blogPosts: BlogPost[];
-};
+  heading: string
+  description: string
+  blogPosts: BlogPost[]
+}
 
 const sections = [
   {
     id: 'section5',
-    title: 'My Journey',
-  }
-];
+    title: 'My Experiences',
+  },
+]
 
 export const experiencesHeaders = sections.flatMap(section => [
   { id: section.id, title: section.title },
-]);
+])
 
-const ExperiencesCards: React.FC<Props> = ({ heading, description, blogPosts }) => {
+const ExperiencesCards: React.FC<Props> = ({
+  heading,
+  description,
+  blogPosts,
+}) => {
   return (
     <section id="section5">
       <div className="">
@@ -39,8 +42,15 @@ const ExperiencesCards: React.FC<Props> = ({ heading, description, blogPosts }) 
         </div>
         <div className="grid grid-cols-1 gap-x-8 gap-y-12 md:grid-cols-2 md:gap-y-16 lg:grid-cols-2 lg:gap-x-12">
           {blogPosts.map((post, index) => (
-            <div key={`${post.title}-${index}`} id={`section5-${index}`} className="flex size-full flex-col items-center justify-start">
-              <a href={post.url} className="mb-6 w-full ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-border-primary focus-visible:ring-offset-2">
+            <div
+              key={`${post.title}-${index}`}
+              id={`section5-${index}`}
+              className="flex size-full flex-col items-center justify-start border rounded hover:scale-105"
+            >
+              <a
+                href={post.url}
+                className="mb-6 w-full ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-border-primary focus-visible:ring-offset-2"
+              >
                 <img
                   src={post.image.src}
                   alt={post.image.alt}
@@ -48,22 +58,30 @@ const ExperiencesCards: React.FC<Props> = ({ heading, description, blogPosts }) 
                   loading="lazy"
                 />
               </a>
-              <div className="mb-4 flex w-full items-center justify-start">
-                <p className="mr-4 bg-background-secondary px-2 py-1 text-sm font-semibold">{post.category}</p>
-                <p className="inline text-sm font-semibold">{post.readTime}</p>
-              </div>
-              <div className="flex w-full flex-col items-start justify-start">
-                <a className="mb-2 ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-border-primary focus-visible:ring-offset-2" href={post.url}>
-                  <h2 className="text-xl font-bold md:text-2xl">{post.title}</h2>
-                </a>
-                <p>{post.description}</p>
+              <div className='p-4'>
+                <div className="mb-4 flex w-full items-center justify-start">
+                  <p className="inline text-sm font-semibold">
+                    {post.readTime}
+                  </p>
+                </div>
+                <div className="flex w-full flex-col items-start justify-start">
+                  <a
+                    className="mb-2 ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-border-primary focus-visible:ring-offset-2"
+                    href={post.url}
+                  >
+                    <h2 className="text-xl font-bold md:text-2xl">
+                      {post.title}
+                    </h2>
+                  </a>
+                  <p>{post.description}</p>
+                </div>
               </div>
             </div>
           ))}
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default ExperiencesCards;
+export default ExperiencesCards

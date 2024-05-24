@@ -5,10 +5,9 @@ type FormData = {
   nameInput: string;
   emailInput: string;
   messageInput: string;
-  acceptTerms: boolean | "indeterminate";
 };
 
-export const sendContactForm = async ({ nameInput, emailInput, messageInput, acceptTerms }: FormData) => {
+export const sendContactForm = async ({ nameInput, emailInput, messageInput }: FormData) => {
   const serviceID = 'your_service_id';
   const templateID = 'your_template_id';
   const userID = 'your_user_id';
@@ -17,7 +16,6 @@ export const sendContactForm = async ({ nameInput, emailInput, messageInput, acc
     name: nameInput,
     email: emailInput,
     message: messageInput,
-    acceptTerms: acceptTerms.toString(),
   };
 
   try {

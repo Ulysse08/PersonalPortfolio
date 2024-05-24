@@ -34,7 +34,7 @@ const sections: Section[] = [
           ]
         },
         { 
-          id: 'section8', 
+          id: 'section9', 
           title: 'Detailed Skills', 
           paragraphs: [
             "Throughout my academic and professional journey, I have developed a diverse skill set that spans technical expertise and soft skills. Below is a detailed breakdown of my skills."
@@ -58,7 +58,7 @@ const sections: Section[] = [
           ]
         },
         { 
-          id: 'section9', 
+          id: 'section10', 
           title: 'Project Examples', 
           paragraphs: [
             "Here are some examples of projects I have worked on, showcasing my technical and management skills."

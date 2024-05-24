@@ -7,18 +7,19 @@ import { BiLogoFacebookCircle, BiLogoInstagram, BiLogoLinkedinSquare, BiLogoYout
 
 import { aboutMeHeaders } from '../components/AboutMeComponent/LongContentBio';
 import { academicBackgroundHeaders } from '../components/AboutMeComponent/AcademicBackground';
-import { experiencesHeaders } from '../components/AboutMeComponent/ExperiencesCards';
 import Footer from '../components/GlobalComponent/Footer';
 
 const HeaderAbout = React.lazy(() => import('../components/AboutMeComponent/HeaderAbout'));
 const AboutMeLongContent = React.lazy(() => import('../components/AboutMeComponent/LongContentBio'));
 const AcademicBackground = React.lazy(() => import('../components/AboutMeComponent/AcademicBackground'));
 const ExperiencesCards = React.lazy(() => import('../components/AboutMeComponent/ExperiencesCards'));
+const ProjectsCards = React.lazy(() => import('../components/AboutMeComponent/ProjectsCards'));
 const TableOfContents = React.lazy(() => import('../components/AboutMeComponent/TableOfContents'));
 
 const mainSections = [
   ...aboutMeHeaders,
   { id: 'section5', title: 'Experiences' },
+  { id: 'section8', title: 'My Academic Projects' },
   ...academicBackgroundHeaders,
 
 ];
@@ -63,6 +64,28 @@ const About: React.FC = () => {
                 heading="My Experiences"
                 description="Here are some highlights of my professional journey."
                 blogPosts={[
+                  {
+                    url: '#',
+                    image: { src: 'image1.jpg', alt: 'Image 1' },
+                    readTime: '(May 2022 - November 2022)',
+                    title: 'Digital Marketing Intern - DIGITAL KORNER, Nantes',
+                    description: 'Description of experience 1',
+                  },
+                  {
+                    url: '#',
+                    image: { src: 'image2.jpg', alt: 'Image 2' },
+                    readTime: '(April 2022 - July 2022)',
+                    title: 'Digitalization Process Intern - VALEO FRANCE',
+                    description: 'Description of experience 2',
+                  },
+                ]}
+              />
+            </div>
+            <div id="section8" className="mb-24 lg:mb-32">
+              <ProjectsCards
+                heading="My Academic Projects"
+                description="Click on each cards to see more details about my academic projects"
+                blogPost2s={[
                   {
                     url: '#',
                     image: { src: 'image1.jpg', alt: 'Image 1' },

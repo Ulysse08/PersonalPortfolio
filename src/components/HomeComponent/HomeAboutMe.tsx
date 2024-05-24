@@ -47,7 +47,7 @@ export const HomeAboutMe: React.FC<HomeAboutMeProps> = props => {
             <div className="mt-6 flex gap-x-6 md:mt-8">
               <div className="mt-6 flex gap-x-6 md:mt-8">
                 <a
-                  href="#_"
+                  href="/about"
                   className="rounded-md  relative inline-flex group items-center justify-center px-4 py-3 m-1 cursor-pointer active:border-main shadow-sm hover:shadow-lg transition-all ease-in-out  bg-gradient-to-tr from-main to-main border-accent text-white"
                 >
                   <span className="flex flex-row justify-center absolute w-0 h-0 transition-all duration-300 ease-out bg-white rounded-full group-hover:w-56 group-hover:h-[150%] opacity-10"></span>
@@ -57,11 +57,11 @@ export const HomeAboutMe: React.FC<HomeAboutMeProps> = props => {
                 </a>
 
                 <a
-                  href="#_"
+                  href="https://www.linkedin.com/in/alexandre-jacquemard-70b665220/"
                   className=" rounded-md relative inline-flex group items-center justify-center px-4 py-3 m-1 cursor-pointer transition-all ease-in-out active:border-main bg-gradient-to-tr from-secondary to-secondary border-accent text-text"
                 >
-                  <span className="flex flex-row justify-center absolute w-0 h-0 transition-all duration-300 ease-out bg-white rounded-full group-hover:w-40 group-hover:h-[150%] opacity-10"></span>
-                  <span className="relative text-text">Resume</span>
+                  <span className="flex flex-row justify-center absolute w-0 h-0 transition-all duration-300 ease-out bg-white rounded-full group-hover:w-64 group-hover:h-[150%] opacity-10"></span>
+                  <span className="relative text-text">Take a Look at my Linkedin</span>
                 </a>
               </div>
             </div>
