@@ -1,4 +1,4 @@
-import emailjs from "@emailjs/browser";
+import emailjs from '@emailjs/browser';
 
 type FormData = {
   nameInput: string;
@@ -8,12 +8,12 @@ type FormData = {
 
 export const sendContactForm = async ({ nameInput, emailInput, messageInput }: FormData) => {
   const serviceID = 'service_07kc9xp';  // Replace with your actual service ID
-  const templateID = 'template_75tki4g';  // Replace with your actual template ID
+  const templateID = 'template_14j3nt9';  // Replace with your actual template ID
   const userID = 'NhhUiYAqQWPVU2x9d';  // Replace with your actual user ID (public key)
 
   const templateParams = {
-    name: nameInput,
-    email: emailInput,
+    user_name: nameInput,
+    user_email: emailInput,
     message: messageInput,
   };
 
@@ -23,6 +23,6 @@ export const sendContactForm = async ({ nameInput, emailInput, messageInput }: F
     alert('Message sent successfully!');
   } catch (error) {
     console.error('Failed to send message:', error);
-    alert('Message sent successfully!');
+    alert('Failed to send message. Please try again.');
   }
 };

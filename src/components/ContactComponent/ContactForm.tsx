@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { Input, Label, Textarea } from "@relume_io/relume-ui";
 import { BiEnvelope, BiMap, BiPhone } from "react-icons/bi";
 import { FaArrowRightLong } from "react-icons/fa6";
-import { sendContactForm } from "./EmailService";
+import { sendContactForm } from "./sendContactForm";
 
 type Props = {
   tagline: string;
