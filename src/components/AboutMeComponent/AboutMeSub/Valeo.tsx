@@ -37,17 +37,17 @@ export const ValeoComponentValeo = (props: ValeoComponentProps) => {
             <h2 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
               {heading}
             </h2>
-            <div className='prose mb-6 md:mb-8 lg:mb-10'>
-            <h3>Overview</h3>
-            <p>
-              During my internship at Valeo France, I focused on developing and
-              implementing an automation tool to streamline the company’s HR
-              administrative tasks. This tool significantly improved efficiency
-              and accuracy, reducing the workload for the HR team and speeding
-              up the corporate card request process. My contributions helped
-              streamline workflows and reduce the time and effort required for
-              routine tasks.
-            </p>
+            <div className="prose mb-6 md:mb-8 lg:mb-10">
+              <h3>Overview</h3>
+              <p>
+                During my internship at Valeo France, I focused on developing
+                and implementing an automation tool to streamline the company’s
+                HR administrative tasks. This tool significantly improved
+                efficiency and accuracy, reducing the workload for the HR team
+                and speeding up the corporate card request process. My
+                contributions helped streamline workflows and reduce the time
+                and effort required for routine tasks.
+              </p>
             </div>
             <img
               src={image.src}
@@ -182,12 +182,12 @@ export const ValeoComponentValeoDefaults: ValeoComponentProps = {
           <strong>Positive Feedback</strong>
           <ul className="mb-10">
             <li>
-            <strong>Easy to Use:</strong> Received commendations for creating a practical and
-              user-friendly tool.
+              <strong>Easy to Use:</strong> Received commendations for creating
+              a practical and user-friendly tool.
             </li>
             <li>
-            <strong>Efficiency:</strong> Noted for reducing task completion time and improving
-              overall efficiency.
+              <strong>Efficiency:</strong> Noted for reducing task completion
+              time and improving overall efficiency.
             </li>
           </ul>
         </li>
@@ -195,13 +195,13 @@ export const ValeoComponentValeoDefaults: ValeoComponentProps = {
           <strong>Innovative Features</strong>
           <ul className="mb-20">
             <li>
-            <strong>Automation:</strong> Implemented automated email notifications and
-              approvals, reducing manual intervention.
+              <strong>Automation:</strong> Implemented automated email
+              notifications and approvals, reducing manual intervention.
             </li>
             <li>
-            <strong>Tracking System:</strong> Developed a system that tracked the entire
-              process in linked spreadsheets, ensuring transparency and
-              accountability.
+              <strong>Tracking System:</strong> Developed a system that tracked
+              the entire process in linked spreadsheets, ensuring transparency
+              and accountability.
             </li>
           </ul>
         </li>
@@ -223,59 +223,6 @@ export const ValeoComponentValeoDefaults: ValeoComponentProps = {
         additional process improvements, demonstrating the potential of
         automation in streamlining administrative tasks.
       </p>
-      <h3>Image Ideas and Placement</h3>
-      <ul>
-        <li>
-          <strong>Automation Tool</strong>
-          <ul>
-            <li>
-              <em>Image Placement:</em> Top of the page, under the "Overview"
-              section.
-            </li>
-            <li>
-              <em>Description:</em> Screenshot of the Google Script code or tool
-              interface.
-            </li>
-          </ul>
-        </li>
-        <li>
-          <strong>Approval Process</strong>
-          <ul>
-            <li>
-              <em>Image Placement:</em> Next to the "Process Optimization"
-              subheading.
-            </li>
-            <li>
-              <em>Description:</em> Flowchart showing the automated approval
-              process.
-            </li>
-          </ul>
-        </li>
-        <li>
-          <strong>Spreadsheet Management</strong>
-          <ul>
-            <li>
-              <em>Image Placement:</em> Adjacent to the "Data Management"
-              subheading.
-            </li>
-            <li>
-              <em>Description:</em> Image of the linked spreadsheet with
-              automated entries.
-            </li>
-          </ul>
-        </li>
-        <li>
-          <strong>Team Feedback</strong>
-          <ul>
-            <li>
-              <em>Image Placement:</em> Near the "Positive Feedback" subheading.
-            </li>
-            <li>
-              <em>Description:</em> Photo of team meetings or feedback sessions.
-            </li>
-          </ul>
-        </li>
-      </ul>
     </>
   ),
   image: {

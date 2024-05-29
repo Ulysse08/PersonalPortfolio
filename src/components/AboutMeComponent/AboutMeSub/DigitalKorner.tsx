@@ -248,61 +248,8 @@ export const DigitalKornerDefaults: DigitalKornerProps = {
         ensuring that customers had access to the information they needed before
         reaching out for support.
       </p>
-      <h3>Image Ideas and Placement</h3>
-      <ul>
-        <li>
-          <strong>Campaign Planning</strong>
-          <ul>
-            <li>
-              <em>Image Placement:</em> Top of the page, under the "Overview"
-              section.
-            </li>
-            <li>
-              <em>Description:</em> A marketing campaign plan on a whiteboard or
-              digital screen.
-            </li>
-          </ul>
-        </li>
-        <li>
-          <strong>Social Media Posts</strong>
-          <ul>
-            <li>
-              <em>Image Placement:</em> Next to the "Social Media Management"
-              subheading.
-            </li>
-            <li>
-              <em>Description:</em> Screenshots of LinkedIn and Twitter posts
-              with high engagement.
-            </li>
-          </ul>
-        </li>
-        <li>
-          <strong>Video Editing</strong>
-          <ul>
-            <li>
-              <em>Image Placement:</em> Adjacent to the "Video Editing"
-              subheading.
-            </li>
-            <li>
-              <em>Description:</em> Screenshot of a video editing software
-              interface with a tutorial video in progress.
-            </li>
-          </ul>
-        </li>
-        <li>
-          <strong>Customer Support</strong>
-          <ul>
-            <li>
-              <em>Image Placement:</em> Near the "Customer Support and Backlog
-              Management" subheading.
-            </li>
-            <li>
-              <em>Description:</em> Image showing a support ticket dashboard or
-              a satisfied customer testimonial.
-            </li>
-          </ul>
-        </li>
-      </ul>
+       
+      
     </>
   ),
   image: {
